@@ -10,4 +10,4 @@ ips = [op.lstrip().split("'")[-2] for op in options.xpath(".//*[@id='tblproxy']/
 portas = [op.lstrip().split("'")[-2] for op in options.xpath(".//*[@id='tblproxy']//script/text()")][1::2]
 resp_time = [op for op in options.xpath(".//*[@id='tblproxy']//td[7]/text()")]
 for ip, porta, rt in zip(ips, portas, resp_time):
-    print ip + " : " + porta + " : " + rt
+    print(ip + " : " + porta + " : " + rt)
